@@ -26,8 +26,6 @@ function getPassword() {
 function save() {
   document.title = password.value
   saveButton.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(`password saya: ${document.title}`))
-  saveButton.setAttribute('download', 'MyPasswordGenerator.txt')
-  setTimeout(() => {
-    alert('password berhasil disimpan')
-  }, 1000);
+  saveButton.setAttribute('download', 'MyPasswordGenerator.txt') 
 }
+
