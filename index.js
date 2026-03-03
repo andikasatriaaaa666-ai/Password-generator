@@ -6,8 +6,7 @@ function generatePassword(len) {
   const lowerAlphabet = "abcdefghijklmnopqrstuvwxyz"
   const upperAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   const numeric = "0123456789"
-  const symbol = "@#$_&-+()/*':;!?~`|•√π÷×¶∆^°={}©®™℅[]<>£€$¢"
-  const data = lowerAlphabet + upperAlphabet + numeric + symbol;
+  const data = lowerAlphabet + upperAlphabet + numeric;
   let generator = ''
   for (let i = 0; i < len; i++) {
     generator += data[Math.floor(Math.random() * data.length)]
@@ -28,4 +27,5 @@ function save() {
   saveButton.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(`password saya: ${document.title}`))
   saveButton.setAttribute('download', 'MyPasswordGenerator.txt') 
 }
+
 
