@@ -5,8 +5,9 @@ let saveButton = document.getElementById('saveButton')
 function generatePassword(len) {
   const lowerAlphabet = "abcdefghijklmnopqrstuvwxyz"
   const upperAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  const symbolic = "~`|•√π÷×¶∆£€$¢^°={}\%©®™[]<>@#£_&-+() /*\"':;!?"
   const numeric = "0123456789"
-  const data = lowerAlphabet + upperAlphabet + numeric;
+  const data = lowerAlphabet + upperAlphabet + numeric + symbolic;
   let generator = ''
   for (let i = 0; i < len; i++) {
     generator += data[Math.floor(Math.random() * data.length)]
